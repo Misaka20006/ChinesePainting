@@ -17,16 +17,6 @@ run/main_scene="res://scenes/main.tscn"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
 
-[autoload]
-
-AudioManager="*res://script/manager/AudioManager.cs"
-GameManager="*res://script/manager/GameManager.cs"
-PlayerManager="*res://script/manager/PlayerManager.cs"
-BulletManager="*res://script/manager/BulletManager.cs"
-CustomKeybindManager="*res://script/manager/CustomKeybindManager.cs"
-ThreatTokenManager="*res://script/manager/ThreatTokenManager.cs"
-NetworkManager="*res://script/manager/NetworkManager.cs"
-
 [dotnet]
 
 project/assembly_name="test"
@@ -35,6 +25,10 @@ project/assembly_name="test"
 
 version_control/plugin_name="GitPlugin"
 version_control/autoload_on_startup=true
+
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/config_table_manager.daylily-zeleen/plugin.cfg")
 
 [input]
 
