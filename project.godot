@@ -1,4 +1,4 @@
-; Engine configuration file.
+﻿; Engine configuration file.
 ; It's best edited using the editor UI and not directly,
 ; since the parameters that go here are not all obvious.
 ;
@@ -13,6 +13,7 @@ config_version=5
 config/name="ChinesePainting"
 config/features=PackedStringArray("4.6", "C#", "Forward Plus")
 config/icon="res://icon.svg"
+run/main_scene="res://scenes/main.tscn"
 
 [autoload]
 
@@ -23,6 +24,25 @@ BulletManager="*res://script/manager/BulletManager.cs"
 CustomKeybindManager="*res://script/manager/CustomKeybindManager.cs"
 ThreatTokenManager="*res://script/manager/ThreatTokenManager.cs"
 NetworkManager="*res://script/manager/NetworkManager.cs"
+
+[input]
+
+move_left={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":65,"physical_keycode":0,"key_label":0,"unicode":97,"echo":false,"pressed":false,"shift":false,"ctrl":false,"alt":false,"meta":false,"command":false)]
+}
+move_right={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":68,"physical_keycode":0,"key_label":0,"unicode":100,"echo":false,"pressed":false,"shift":false,"ctrl":false,"alt":false,"meta":false,"command":false)]
+}
+jump={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":75,"physical_keycode":0,"key_label":0,"unicode":107,"echo":false,"pressed":false,"shift":false,"ctrl":false,"alt":false,"meta":false,"command":false)]
+}
+attack={
+"deadzone": 0.5,
+"events": [Object(InputEventKey,"keycode":74,"physical_keycode":0,"key_label":0,"unicode":106,"echo":false,"pressed":false,"shift":false,"ctrl":false,"alt":false,"meta":false,"command":false)]
+}
 
 [dotnet]
 
@@ -40,3 +60,4 @@ version_control/autoload_on_startup=true
 [rendering]
 
 rendering_device/driver.windows="d3d12"
+
