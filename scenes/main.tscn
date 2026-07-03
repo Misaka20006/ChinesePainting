@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bfhongftblrk5"]
+
+[ext_resource type="Script" uid="uid://cw0hg3cxhnnls" path="res://script/player/Player.cs" id="1"]
+[ext_resource type="Script" uid="uid://cdd7vdu4dikbl" path="res://script/ground/Ground.cs" id="2"]
+[ext_resource type="Script" uid="uid://caahk700du7hx" path="res://script/dummy/WoodenDummy.cs" id="3"]
+
+[sub_resource type="RectangleShape2D" id="1"]
+size = Vector2(28, 44)
+
+[sub_resource type="RectangleShape2D" id="2"]
+size = Vector2(800, 48)
+
+[sub_resource type="RectangleShape2D" id="3"]
+size = Vector2(32, 48)
+
+[node name="World" type="Node2D" unique_id=1866140652]
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=1349992508]
+position = Vector2(400, 300)
+script = ExtResource("1")
+Friction = 1400.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=1762594522]
+shape = SubResource("1")
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1768835345]
+position_smoothing_enabled = true
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1867067787]
+position = Vector2(400, 576)
+script = ExtResource("2")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=278099956]
+shape = SubResource("2")
+
+[node name="WoodenDummy" type="StaticBody2D" parent="." unique_id=1766535392]
+position = Vector2(600, 552)
+collision_layer = 2
+script = ExtResource("3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WoodenDummy" unique_id=1760060780]
+shape = SubResource("3")
